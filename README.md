@@ -16,5 +16,6 @@ In this assignment, you will create a secure SOAP (Simple Object Access Protocol
 ```bash
 git clone <repository-url>
 npm install
+npm start
 openssl req -nodes -new -x509 -keyout cert/server.key -out cert/server.cert
 ```

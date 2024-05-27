@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "51dad948-a6b3-470f-9f6e-407e233a4ca9",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27830494",
+		"_collection_link": "https://planetary-rocket-359918.postman.co/workspace/soap-api~92fb49e7-539f-4151-a1b5-43c454fda574/collection/27830494-51dad948-a6b3-470f-9f6e-407e233a4ca9?action=share&source=collection_link&creator=27830494"
+	},
+	"item": [
+		{
+			"name": "create product",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" \r\n                  xmlns:prod=\"http://www.example.org/ProductService/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <prod:createProductRequest>\r\n         <prod:name>Example Product</prod:name>\r\n         <prod:description>This is an example product.</prod:description>\r\n         <prod:price>19.99</prod:price>\r\n         <prod:inStock>true</prod:inStock>\r\n      </prod:createProductRequest>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:3000/soap",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"soap"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get [product",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" \r\n                  xmlns:prod=\"http://www.example.org/ProductService/\">\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <prod:getProductRequest>\r\n            <prod:id>6650479fb0b42b704ab13b44</prod:id>\r\n        </prod:getProductRequest>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:3000/soap",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"soap"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" \r\n                  xmlns:prod=\"http://www.example.org/ProductService/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <prod:updateProductRequest>\r\n         <prod:id>6650404da5b79596d27ff551</prod:id>\r\n         <prod:name>New Product Name</prod:name>\r\n         <prod:description>New Description</prod:description>\r\n         <prod:price>29.99</prod:price>\r\n         <prod:inStock>false</prod:inStock>\r\n      </prod:updateProductRequest>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:3000/soap",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"soap"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" \r\n                  xmlns:prod=\"http://www.example.org/ProductService/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <prod:deleteProductRequest>\r\n         <prod:id>6650404da5b79596d27ff551</prod:id>\r\n      </prod:deleteProductRequest>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:3000/soap",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"soap"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
