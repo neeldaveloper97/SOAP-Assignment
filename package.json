@@ -1,0 +1,38 @@
+{
+  "name": "soap-assignment",
+  "version": "1.0.0",
+  "description": "This task entails crafting a robust SOAP (Simple Object Access Protocol) API using Node.js and Express, fortified with MongoDB for database management. The core aim is to showcase proficiency in constructing a secure SOAP API, implementing protective measures, and seamlessly integrating it with a MongoDB database.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neeldaveloper97/SOAP-Assignment.git"
+  },
+  "author": "Neel Dave",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-basic-auth": "^1.2.1",
+    "https": "^1.0.0",
+    "mongoose": "^8.4.0",
+    "nodemon": "^3.1.0",
+    "soap": "^1.0.3",
+    "supertest": "^7.0.0",
+    "xmlbuilder": "^15.1.1"
+  },
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "chai-http": "^4.4.0",
+    "jest": "^29.7.0",
+    "mocha": "^10.4.0"
+  },
+  "bugs": {
+    "url": "https://github.com/neeldaveloper97/SOAP-Assignment/issues"
+  },
+  "homepage": "https://github.com/neeldaveloper97/SOAP-Assignment#readme"
+}
